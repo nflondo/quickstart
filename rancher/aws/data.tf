@@ -10,7 +10,7 @@ data "aws_ami" "sles" {
 
   filter {
     name   = "name"
-    values = ["suse-sles-15-sp3*"]
+    values = ["suse-sles-15-sp5*"]
   }
 
   filter {
@@ -31,10 +31,11 @@ data "aws_ami" "sles" {
 
 data "aws_ami" "windows" {
   most_recent = true
-  owners      = ["801119661308"] #Amazon
+#  owners      = ["801119661308"] #Amazon
+  owners      = ["amazon"] #Amazon
   filter {
     name   = "name"
-    values = ["Windows_Server-2019-English-Full-ContainersLatest-*"]
+    values = ["Windows_Server-2019-*"]
   }
 
   filter {
